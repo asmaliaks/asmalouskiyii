@@ -43,8 +43,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'page-grid',
 	'dataProvider'=>$model->search(),
+        'selectableRows'=>2,
 	'filter'=>$model,
 	'columns'=>array(
+                array(
+                    'class'=>'CCheckBoxColumn',
+                    'id'=>'checked'
+                ),
 		'id',
 		'title',
 		'text',
