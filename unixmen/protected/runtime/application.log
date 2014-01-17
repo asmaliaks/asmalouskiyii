@@ -551,3 +551,176 @@ REQUEST_URI=/index.php?r=Book/index&id=6
 in /var/www/yii/unixmen/protected/views/book/index.php (2)
 in /var/www/yii/unixmen/protected/controllers/BookController.php (9)
 in /var/www/yii/unixmen/index.php (13)
+2014/01/17 11:31:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('my')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/yii/unixmen/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=my
+---
+2014/01/17 11:40:14 [error] [php] Undefined variable: model (/var/www/yii/unixmen/protected/views/my/one.php:2)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): MyController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): MyController->renderPartial()
+#2 /var/www/yii/unixmen/protected/controllers/MyController.php(11): MyController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): MyController->actionOne()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): MyController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): MyController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): MyController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/yii/unixmen/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=my
+in /var/www/yii/unixmen/protected/views/my/one.php (2)
+in /var/www/yii/unixmen/protected/controllers/MyController.php (11)
+in /var/www/yii/unixmen/index.php (13)
+2014/01/17 11:40:37 [error] [php] Undefined variable: vlue (/var/www/yii/unixmen/protected/views/my/one.php:3)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): MyController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): MyController->renderPartial()
+#2 /var/www/yii/unixmen/protected/controllers/MyController.php(11): MyController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): MyController->actionOne()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): MyController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): MyController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): MyController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/yii/unixmen/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=my
+in /var/www/yii/unixmen/protected/views/my/one.php (3)
+in /var/www/yii/unixmen/protected/controllers/MyController.php (11)
+in /var/www/yii/unixmen/index.php (13)
+2014/01/17 12:20:13 [error] [php] Undefined variable: model (/var/www/yii/unixmen/protected/views/my/one.php:6)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): MyController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): MyController->renderPartial()
+#2 /var/www/yii/unixmen/protected/controllers/MyController.php(11): MyController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): MyController->actionOne()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): MyController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): MyController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): MyController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/yii/unixmen/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=my
+in /var/www/yii/unixmen/protected/views/my/one.php (6)
+in /var/www/yii/unixmen/protected/controllers/MyController.php (11)
+in /var/www/yii/unixmen/index.php (13)
+2014/01/17 12:20:30 [error] [php] Trying to get property of non-object (/var/www/yii/unixmen/protected/views/my/one.php:6)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): MyController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): MyController->renderPartial()
+#2 /var/www/yii/unixmen/protected/controllers/MyController.php(11): MyController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): MyController->actionOne()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): MyController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): MyController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): MyController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/yii/unixmen/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=my
+in /var/www/yii/unixmen/protected/views/my/one.php (6)
+in /var/www/yii/unixmen/protected/controllers/MyController.php (11)
+in /var/www/yii/unixmen/index.php (13)
+2014/01/17 12:42:55 [error] [exception.CException] exception 'CException' with message 'MyController cannot find the requested view "part/_part.php".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/unixmen/protected/views/my/one.php(10): CController->renderPartial('part/_part.php', Array)
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/yii/un...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/yii/un...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/yii/un...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('one', Array, true)
+#5 /var/www/yii/unixmen/protected/controllers/MyController.php(11): CController->render('one', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): MyController->actionOne()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('my')
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/yii/unixmen/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=my
+---
+2014/01/17 12:43:40 [error] [exception.CException] exception 'CException' with message 'MyController cannot find the requested view "/part/_part.php".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/unixmen/protected/views/my/one.php(10): CController->renderPartial('/part/_part.php', Array)
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/yii/un...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/yii/un...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/yii/un...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('one', Array, true)
+#5 /var/www/yii/unixmen/protected/controllers/MyController.php(11): CController->render('one', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): MyController->actionOne()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('my')
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/yii/unixmen/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=my
+---
+2014/01/17 12:44:39 [error] [exception.CException] exception 'CException' with message 'MyController cannot find the requested view "/part/_part.php".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/unixmen/protected/views/my/one.php(10): CController->renderPartial('/part/_part.php', Array)
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/yii/un...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/yii/un...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/yii/un...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('one', Array, true)
+#5 /var/www/yii/unixmen/protected/controllers/MyController.php(11): CController->render('one', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): MyController->actionOne()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('my')
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/yii/unixmen/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=my
+---
+2014/01/17 12:47:14 [error] [exception.CException] exception 'CException' with message 'MyController cannot find the requested view "/part/_part.php".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/unixmen/protected/views/my/one.php(10): CController->renderPartial('/part/_part.php', Array)
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/yii/un...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/yii/un...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/yii/un...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('one', Array, true)
+#5 /var/www/yii/unixmen/protected/controllers/MyController.php(11): CController->render('one', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): MyController->actionOne()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('my')
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/yii/unixmen/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=my
+---
+2014/01/17 12:47:16 [error] [exception.CException] exception 'CException' with message 'MyController cannot find the requested view "/part/_part.php".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/unixmen/protected/views/my/one.php(10): CController->renderPartial('/part/_part.php', Array)
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/yii/un...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/yii/un...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/yii/un...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('one', Array, true)
+#5 /var/www/yii/unixmen/protected/controllers/MyController.php(11): CController->render('one', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): MyController->actionOne()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('my')
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/yii/unixmen/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=my
+---

@@ -2,8 +2,13 @@
 
 class MyController extends Controller
 {
+    public $defaultAction = 'one';
+    
     public function actionOne(){
-        echo 'huj';
+        
+        $model = Page::model()->findAll(array('order'=>'title ASC'));
+        
+        $this->render('one', array('model' => $model));
     }
     
     
