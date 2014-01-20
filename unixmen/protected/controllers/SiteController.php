@@ -27,19 +27,7 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-            
-            $connection = Yii::app()->db2;
-            
-            $sql = 'SELECT * FROM {{page}}';
-            
-            $command = $connection->createCommand($sql);
-            $c = $command->queryAll();
-           // $c = $command->execute(); // insert delete update
-            foreach($c as $value){
-                echo $value['title'];
-                echo '</br>';
-            } 
-            
+
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
