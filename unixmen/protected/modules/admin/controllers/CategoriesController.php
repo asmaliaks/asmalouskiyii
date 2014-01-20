@@ -49,12 +49,7 @@ class CategoriesController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
-	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
-	}
+
 
 	/**
 	 * Creates a new model.
@@ -71,7 +66,7 @@ class CategoriesController extends Controller
 		{
 			$model->attributes=$_POST['Categories'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('create',array(
@@ -95,7 +90,7 @@ class CategoriesController extends Controller
 		{
 			$model->attributes=$_POST['Categories'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('update',array(
@@ -120,22 +115,31 @@ class CategoriesController extends Controller
 	/**
 	 * Lists all models.
 	 */
-//	public function actionIndex()
-//	{
-//		$dataProvider=new CActiveDataProvider('Categories');
-//		$this->render('index',array(
-//			'dataProvider'=>$dataProvider,
-//		));
-//	}
+	public function actionIndex()
+	{
+		$model=new Categories('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Categories']))
+			$model->attributes=$_GET['Categories'];
+
+		$this->render('index',array(
+			'model'=>$model,
+		));            
+
+	}
 
 	/**
 	 * Manages all models.
 	 */
-	public function actionIndex()
+	public function actionAdmin()
 	{
-		$dataProvider=new CActiveDataProvider('Categories');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+		$model=new Categories('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Categories']))
+			$model->attributes=$_GET['Categories'];
+
+		$this->render('admin',array(
+			'model'=>$model,
 		));
 	}
 
