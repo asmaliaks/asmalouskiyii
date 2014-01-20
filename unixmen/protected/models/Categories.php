@@ -1,19 +1,18 @@
 <?php
 
 /**
- * This is the model class for table "{{page}}".
+ * This is the model class for table "{{categories}}".
  *
- * The followings are the available columns in table '{{page}}':
+ * The followings are the available columns in table '{{categories}}':
  * @property integer $id
  * @property string $title
- * @property string $text
  */
-class Page extends CActiveRecord
+class Categories extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Page the static model class
+	 * @return Categories the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -25,7 +24,7 @@ class Page extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{page}}';
+		return '{{categories}}';
 	}
 
 	/**
@@ -36,11 +35,11 @@ class Page extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, text', 'required'),
-			array('title', 'length', 'max'=>225),
+			array('title', 'required'),
+			array('title', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, text', 'safe', 'on'=>'search'),
+			array('id, title', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,7 +51,7 @@ class Page extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-                    'categories' => array(self::BELONGS_TO, 'Categories','category_id'),
+                    'pages' => array(self::HAS_MANY, 'Page', 'category_id')
 		);
 	}
 
@@ -64,7 +63,7 @@ class Page extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'title' => 'Title',
-			'text' => 'Text',
+                        'page' => 'Pages'
 		);
 	}
 
@@ -81,22 +80,9 @@ class Page extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
-		$criteria->compare('text',$this->text,true);
 
-                $sort = new CSort();
-                $sort->attributes = array(
-                    'title'=> array(
-                        'asc' => 'title',
-                        'desc'=> 'title desc'
-                    )
-                );
-                
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
-                        'pagination' => array(
-                            'pageSize' => 3
-                        ),
-                        'sort' => $sort
 		));
 	}
 }

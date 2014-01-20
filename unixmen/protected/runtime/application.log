@@ -827,3 +827,13 @@ Stack trace:
 #22 {main}
 REQUEST_URI=/index.php?r=page/admin
 ---
+2014/01/20 11:13:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii.o_categoriesries' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `o_categoriesries`.
+in /var/www/yii/unixmen/index.php (13)
+2014/01/20 11:51:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "category".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('category')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/yii/unixmen/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=category
+---
