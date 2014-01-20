@@ -60,6 +60,15 @@ return array(
 			'charset' => 'utf8',
                         'tablePrefix'=>'o_'
 		),
+		'db2'=>array(
+                        'class' => 'system.db.CDbConnection',
+			'connectionString' => 'mysql:host=localhost;dbname=yii',
+			'emulatePrepare' => true,
+			'username' => 'root',
+			'password' => '123123',
+			'charset' => 'utf8',
+                        'tablePrefix'=>'o_'
+		),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
