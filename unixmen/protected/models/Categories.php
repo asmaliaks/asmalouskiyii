@@ -85,4 +85,10 @@ class Categories extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+        public static function listAll(){
+            
+            $models = self::model()->findAll();
+            return CHtml::listData($models, 'id','title');
+        }
 }

@@ -20,6 +20,7 @@ class Page extends CActiveRecord
 		return parent::model($className);
 	}
 
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -36,8 +37,10 @@ class Page extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, text', 'required'),
+			array('title, text, category_id', 'required'),
+			array('category_id', 'numerical'),
 			array('title', 'length', 'max'=>225),
+                        array('text', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, title, text', 'safe', 'on'=>'search'),
@@ -65,6 +68,7 @@ class Page extends CActiveRecord
 			'id' => 'ID',
 			'title' => 'Title',
 			'text' => 'Text',
+			'category_id' => 'Category',
 		);
 	}
 
@@ -99,4 +103,6 @@ class Page extends CActiveRecord
                         'sort' => $sort
 		));
 	}
+        
+
 }
